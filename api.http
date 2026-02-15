@@ -1,0 +1,107 @@
+GET http://localhost:8000/products/ HTTp/1.1
+
+###
+GET http://localhost:8000/products/1/ HTTp/1.1
+
+###
+DELETE http://localhost:8000/products/1/ HTTp/1.1
+
+###
+PUT  http://localhost:8000/products/1/ HTTp/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3Nzg5Nzc2LCJpYXQiOjE3Njc3ODk0NzYsImp0aSI6IjAwNjRiMjdjNWMwNzRkYWZiZDdkMmQyM2ZiNjhlYzA4IiwidXNlcl9pZCI6IjIifQ.ZXvhmUajxsRExkQdSboASZjkkRnRMKTQk3sWVsvoshk
+
+{
+    "name": "Television",
+    "price": 29.99,
+    "description": "A description of the new product.",
+    "stock": 100
+}
+
+###
+POST http://localhost:8000/products/ HTTp/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3Nzg5Nzc2LCJpYXQiOjE3Njc3ODk0NzYsImp0aSI6IjAwNjRiMjdjNWMwNzRkYWZiZDdkMmQyM2ZiNjhlYzA4IiwidXNlcl9pZCI6IjIifQ.ZXvhmUajxsRExkQdSboASZjkkRnRMKTQk3sWVsvoshk
+
+{
+    "name": "Television",
+    "price": 29.99,
+    "description": "A description of the new product.",
+    "stock": 100
+}
+
+
+###
+GET http://localhost:8000/user-orders/ HTTp/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3Nzg5Nzc2LCJpYXQiOjE3Njc3ODk0NzYsImp0aSI6IjAwNjRiMjdjNWMwNzRkYWZiZDdkMmQyM2ZiNjhlYzA4IiwidXNlcl9pZCI6IjIifQ.ZXvhmUajxsRExkQdSboASZjkkRnRMKTQk3sWVsvoshk
+
+###
+POST http://localhost:8000/api/token/ HTTp/1.1
+Content-Type: application/json
+
+# {
+#     "username": "admin",
+#     "password": "test"
+# }
+
+{
+    "username": "tamimi",
+    "password": "tamimi2001"
+}
+
+###
+POST http://localhost:8000/api/token/refresh HTTp/1.1
+Content-Type: application/json
+
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3Nzg5Nzc2LCJpYXQiOjE3Njc3ODk0NzYsImp0aSI6IjAwNjRiMjdjNWMwNzRkYWZiZDdkMmQyM2ZiNjhlYzA4IiwidXNlcl9pZCI6IjIifQ.ZXvhmUajxsRExkQdSboASZjkkRnRMKTQk3sWVsvoshk"
+}
+
+### 
+GET http://localhost:8000/orders/ HTTp/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3Nzg5ODI1LCJpYXQiOjE3Njc3ODk1MjUsImp0aSI6IjE0ZDcwNGM4NmEyMDQ4NmJiMzA1YTdjYmM2ZTM4MjRlIiwidXNlcl9pZCI6IjIifQ.05ltEyOWDRykt7VC0G1BCBq1tNM_-i8wqlrFR2uu5NI
+
+###
+GET http://localhost:8000/orders/d251e88d-5827-450a-b770-0705d6a75b8a/ HTTp/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3Nzg5Nzc2LCJpYXQiOjE3Njc3ODk0NzYsImp0aSI6IjAwNjRiMjdjNWMwNzRkYWZiZDdkMmQyM2ZiNjhlYzA4IiwidXNlcl9pZCI6IjIifQ.ZXvhmUajxsRExkQdSboASZjkkRnRMKTQk3sWVsvoshk
+
+###
+POST http://localhost:8000/orders/ HTTp/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3NzcwODUwLCJpYXQiOjE3Njc3NzA1NTAsImp0aSI6ImI1ODFmNDYzZGEyMzQ4NWM4MWRlNWFjZjMxOGQ4NWQ5IiwidXNlcl9pZCI6IjIifQ.KkvjvKB3Jdo-6nFJegVY7jASyTUtCW88QTDf1GLmanw
+
+{
+    "status": "PENDING",
+    "items": [
+        {
+            "product": 2,
+            "quantity": 2
+        },
+        {
+            "product": 3,
+            "quantity": 1
+        }
+    ]
+}
+
+###
+PUT http://localhost:8000/orders/739061ae-635e-4399-acf7-e09b30488298/ HTTp/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3Nzg5ODI1LCJpYXQiOjE3Njc3ODk1MjUsImp0aSI6IjE0ZDcwNGM4NmEyMDQ4NmJiMzA1YTdjYmM2ZTM4MjRlIiwidXNlcl9pZCI6IjIifQ.05ltEyOWDRykt7VC0G1BCBq1tNM_-i8wqlrFR2uu5NI
+
+{
+    "status": "CONFIRMED",
+    "items": [
+        {
+            "product": 3,
+            "quantity": 2
+        },
+        {
+            "product": 4,
+            "quantity": 1
+        }
+    ]
+}
+###
+DELETE http://localhost:8000/orders/d251e88d-5827-450a-b770-0705d6a75b8a/ HTTp/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY3Nzg5ODI1LCJpYXQiOjE3Njc3ODk1MjUsImp0aSI6IjE0ZDcwNGM4NmEyMDQ4NmJiMzA1YTdjYmM2ZTM4MjRlIiwidXNlcl9pZCI6IjIifQ.05ltEyOWDRykt7VC0G1BCBq1tNM_-i8wqlrFR2uu5NI
